@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--First View Controller-->
+        <!--Map-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="ixLocation" customModuleProvider="target" sceneMemberID="viewController">
@@ -24,16 +24,25 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6Bb-Y4-IkM">
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                             </mapView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pQ4-u7-Bpu">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Map" id="E8d-VP-JYD"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="6Bb-Y4-IkM" secondAttribute="trailing" id="Mb2-hq-6Tt"/>
-                            <constraint firstItem="6Bb-Y4-IkM" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="mOZ-US-Dfu"/>
-                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="6Bb-Y4-IkM" secondAttribute="bottom" id="pzk-iu-lR1"/>
-                            <constraint firstItem="6Bb-Y4-IkM" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="v6B-Kt-Zlq"/>
+                            <constraint firstItem="6Bb-Y4-IkM" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="5Ll-pB-Axo"/>
+                            <constraint firstItem="6Bb-Y4-IkM" firstAttribute="trailing" secondItem="pQ4-u7-Bpu" secondAttribute="trailing" id="8CZ-hY-eLG"/>
+                            <constraint firstAttribute="trailing" secondItem="6Bb-Y4-IkM" secondAttribute="trailing" id="PaK-W0-aXm"/>
+                            <constraint firstItem="6Bb-Y4-IkM" firstAttribute="top" secondItem="pQ4-u7-Bpu" secondAttribute="top" id="eOj-eY-Fex"/>
+                            <constraint firstItem="6Bb-Y4-IkM" firstAttribute="bottom" secondItem="4ug-Mw-9AY" secondAttribute="top" id="fOT-le-h5g"/>
+                            <constraint firstItem="6Bb-Y4-IkM" firstAttribute="leading" secondItem="pQ4-u7-Bpu" secondAttribute="leading" id="g1D-lR-JEo"/>
+                            <constraint firstItem="6Bb-Y4-IkM" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="o5z-og-93s"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" enabled="NO" selectedImage="globe" systemItem="downloads" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="Map" image="ic_location_on_black_24dp_1x" selectedImage="ic_location_on_black_24dp_1x" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="map" destination="6Bb-Y4-IkM" id="Tnv-Lt-XUx"/>
                     </connections>
@@ -42,7 +51,7 @@
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="-312.59370314842579"/>
         </scene>
-        <!--Second-->
+        <!--Gmaps-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="ixLocation" customModuleProvider="target" sceneMemberID="viewController">
@@ -53,15 +62,24 @@
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oqF-yw-giZ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Gmaps" id="r4z-Rf-aea"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Gmaps" image="second" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
         </scene>
-        <!--Item-->
+        <!--Activities-->
         <scene sceneID="75m-VG-Qef">
             <objects>
                 <viewController id="J7i-cg-9Sk" customClass="ActivityLogViewController" customModule="ixLocation" customModuleProvider="target" sceneMemberID="viewController">
@@ -72,15 +90,60 @@
                     <view key="view" contentMode="scaleToFill" id="XoS-hu-Yat">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7wc-4i-KHe">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Activity Log" id="FAo-VZ-MgD">
+                                        <barButtonItem key="rightBarButtonItem" image="ic_add" id="JFq-TM-imb">
+                                            <connections>
+                                                <segue destination="pBD-sj-ToJ" kind="show" id="AcR-Cb-L2u"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="qgZ-BN-gSe"/>
+                    <tabBarItem key="tabBarItem" title="Activities" image="ic_list_black_24dp_1x" id="qgZ-BN-gSe"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TZK-aM-4mN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1647" y="-321"/>
         </scene>
-        <!--Item-->
+        <!--View Controller-->
+        <scene sceneID="Ox4-ZL-Nlt">
+            <objects>
+                <viewController id="pBD-sj-ToJ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vzk-9a-wzC"/>
+                        <viewControllerLayoutGuide type="bottom" id="ghs-HT-8Pc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XKR-9D-sig">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gVw-5w-oJd">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Add Activity" id="Ud2-31-bvR">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="0xa-R4-NVF"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Save" id="chL-fu-6Wp"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BpC-EO-wgb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2636" y="-324"/>
+        </scene>
+        <!--Settings-->
         <scene sceneID="crp-ZX-Mfv">
             <objects>
                 <viewController id="84x-Tx-5Yp" customClass="SettingsViewController" customModule="ixLocation" customModuleProvider="target" sceneMemberID="viewController">
@@ -91,13 +154,22 @@
                     <view key="view" contentMode="scaleToFill" id="fdj-uf-ezQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U5k-kl-HD2">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Settings" id="AaN-vm-zvU"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Rqp-21-AoG"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="ic_settings_black_24dp_1x" selectedImage="ic_settings_black_24dp_1x" id="Rqp-21-AoG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ole-Zl-AzN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1646" y="359"/>
+            <point key="canvasLocation" x="654" y="1189"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -122,7 +194,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="globe" width="15" height="15"/>
+        <image name="ic_add" width="24" height="24"/>
+        <image name="ic_list_black_24dp_1x" width="24" height="24"/>
+        <image name="ic_location_on_black_24dp_1x" width="24" height="24"/>
+        <image name="ic_settings_black_24dp_1x" width="24" height="24"/>
         <image name="second" width="30" height="30"/>
     </resources>
 </document>
