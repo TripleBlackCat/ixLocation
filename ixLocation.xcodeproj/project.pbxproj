@@ -17,6 +17,8 @@
 		84BEF26A1F0A8A5D00A52FD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84BEF2681F0A8A5D00A52FD0 /* LaunchScreen.storyboard */; };
 		84BEF2751F0A8A5D00A52FD0 /* ixLocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BEF2741F0A8A5D00A52FD0 /* ixLocationTests.swift */; };
 		84BEF2801F0A8A5D00A52FD0 /* ixLocationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BEF27F1F0A8A5D00A52FD0 /* ixLocationUITests.swift */; };
+		84F119701F0B7F9800B25D06 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F1196F1F0B7F9800B25D06 /* SettingsViewController.swift */; };
+		84F119721F0B7FC900B25D06 /* ActivityLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F119711F0B7FC900B25D06 /* ActivityLogViewController.swift */; };
 		BF8142BD965ABEBC04A702FE /* Pods_ixLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C620A7BC6D624FE60F956FBA /* Pods_ixLocation.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +57,8 @@
 		84BEF27B1F0A8A5D00A52FD0 /* ixLocationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ixLocationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84BEF27F1F0A8A5D00A52FD0 /* ixLocationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ixLocationUITests.swift; sourceTree = "<group>"; };
 		84BEF2811F0A8A5D00A52FD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84F1196F1F0B7F9800B25D06 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		84F119711F0B7FC900B25D06 /* ActivityLogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityLogViewController.swift; sourceTree = "<group>"; };
 		8720608A182631D41C785C95 /* Pods_ixLocationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ixLocationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AA2CFBC4062D81F915DFB90 /* Pods_ixLocationUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ixLocationUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE662EA99CD131BFC9A6A0E /* Pods-ixLocation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ixLocation.release.xcconfig"; path = "Pods/Target Support Files/Pods-ixLocation/Pods-ixLocation.release.xcconfig"; sourceTree = "<group>"; };
@@ -133,6 +137,8 @@
 				84BEF25F1F0A8A5D00A52FD0 /* FirstViewController.swift */,
 				84BEF2611F0A8A5D00A52FD0 /* SecondViewController.swift */,
 				84BEF2631F0A8A5D00A52FD0 /* Main.storyboard */,
+				84F119711F0B7FC900B25D06 /* ActivityLogViewController.swift */,
+				84F1196F1F0B7F9800B25D06 /* SettingsViewController.swift */,
 				84BEF2661F0A8A5D00A52FD0 /* Assets.xcassets */,
 				84BEF2681F0A8A5D00A52FD0 /* LaunchScreen.storyboard */,
 				84BEF26B1F0A8A5D00A52FD0 /* Info.plist */,
@@ -449,9 +455,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84F119721F0B7FC900B25D06 /* ActivityLogViewController.swift in Sources */,
 				84BEF2621F0A8A5D00A52FD0 /* SecondViewController.swift in Sources */,
 				84BEF25E1F0A8A5D00A52FD0 /* AppDelegate.swift in Sources */,
 				84BEF2601F0A8A5D00A52FD0 /* FirstViewController.swift in Sources */,
+				84F119701F0B7F9800B25D06 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -704,6 +712,7 @@
 				84BEF2861F0A8A5D00A52FD0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84BEF2871F0A8A5D00A52FD0 /* Build configuration list for PBXNativeTarget "ixLocationTests" */ = {
 			isa = XCConfigurationList;
@@ -712,6 +721,7 @@
 				84BEF2891F0A8A5D00A52FD0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84BEF28A1F0A8A5D00A52FD0 /* Build configuration list for PBXNativeTarget "ixLocationUITests" */ = {
 			isa = XCConfigurationList;
@@ -720,6 +730,7 @@
 				84BEF28C1F0A8A5D00A52FD0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

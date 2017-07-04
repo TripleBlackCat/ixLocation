@@ -64,7 +64,7 @@
         <!--Item-->
         <scene sceneID="75m-VG-Qef">
             <objects>
-                <viewController id="J7i-cg-9Sk" sceneMemberID="viewController">
+                <viewController id="J7i-cg-9Sk" customClass="ActivityLogViewController" customModule="ixLocation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Mrf-Wa-j4x"/>
                         <viewControllerLayoutGuide type="bottom" id="y82-kp-rPv"/>
@@ -83,7 +83,7 @@
         <!--Item-->
         <scene sceneID="crp-ZX-Mfv">
             <objects>
-                <viewController id="84x-Tx-5Yp" sceneMemberID="viewController">
+                <viewController id="84x-Tx-5Yp" customClass="SettingsViewController" customModule="ixLocation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tjq-u5-wLd"/>
                         <viewControllerLayoutGuide type="bottom" id="mmp-2k-V1M"/>
